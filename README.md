@@ -5,3 +5,5 @@ This is a sampled version of the [`wikimedia/wikipedia`](https://huggingface.co/
 ## Dataset
 
 You can find the dataset here: https://huggingface.co/datasets/xhluca/mini_wiki
+
+Information about how to use it can be found in the Data card.

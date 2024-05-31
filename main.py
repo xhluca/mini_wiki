@@ -4,7 +4,7 @@ from datasets import load_dataset
 # save to huggingface using api
 from huggingface_hub import HfApi
 
-def truncate_text(examples, max_length=500):
+def truncate_text(examples, max_length=200):
     splitted = examples["text"].split()
     return " ".join(splitted[:max_length])
 
@@ -40,12 +40,12 @@ for n in n_to_str:
         repo_id="xhluca/mini_wiki",
         config_name=config,
         commit_message=f"Add {config} examples",
-        split="full",
+        split="partial",
     )
 
     ds_sampled_full.push_to_hub(
         repo_id="xhluca/mini_wiki",
         config_name=config,
         commit_message=f"Add {config} examples",
-        split="partial",
+        split="full",
     )
